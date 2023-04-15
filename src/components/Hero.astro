@@ -1,0 +1,28 @@
+---
+import PrimaryBTN from "./PrimaryBTN.astro";
+import heroIMG from "../img/illustration-intro.svg";
+---
+
+<section id='hero'>
+  <div
+    class='container mx-auto mt-10 flex flex-col-reverse items-center space-y-0 px-6 md:flex-row md:space-y-0'
+  >
+    <div class='mb-32 flex flex-col space-y-12 md:w-1/2'>
+      <h1
+        class='max-w-md text-center text-4xl font-bold md:text-left md:text-5xl'
+      >
+        Bring everyone together to build better products
+      </h1>
+      <p class='max-w-sm text-center text-darkGrayishBlue md:text-left'>
+        Manage makes it simple for software teams to plan day-to-day tasks while
+        keeping the larger team goals in view.
+      </p>
+      <div class='flex justify-center md:justify-start'>
+        <PrimaryBTN>Get Started</PrimaryBTN>
+      </div>
+    </div>
+    <div class='md:w-1/2'>
+      <img src={heroIMG} alt='' />
+    </div>
+  </div>
+</section>
