@@ -1,0 +1,11 @@
+---
+const { img, name, quote } = Astro.props;
+---
+
+<div
+  class='mb-10 flex flex-col items-center space-y-6 rounded-lg bg-veryLightGray p-6 md:w-1/3'
+>
+  <img src={img} class='-mt-14 w-16' alt='' />
+  <h5 class='text-lg font-bold'>{name}</h5>
+  <p class='text-darkGryishBlur text-sm'>{quote}</p>
+</div>
