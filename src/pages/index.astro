@@ -122,7 +122,6 @@ const testimonial3 = `“Manage has supercharged our team’s workflow. The abil
         <Testimonial img={anisha} name='Anisha Li' quote={testimonial1} />
         <!-- Testimonal 2 -->
         <Testimonial img={ali} name='Ali Bravo' quote={testimonial2} />
-
         <!-- Testimonial 3 -->
         <Testimonial img={richard} name='Richard Watts' quote={testimonial3} />
       </div>
@@ -142,3 +141,15 @@ const testimonial3 = `“Manage has supercharged our team’s workflow. The abil
     </div>
   </section>
 </Layout>
+
+<style>
+  #cta {
+    background-image: url("../img/bg-simplify-section-desktop.svg");
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 768px) {
+    #cta {
+      background-image: url("../img/bg-simplify-section-mobile.svg");
+    }
+  }
+</style>

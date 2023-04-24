@@ -1,10 +1,9 @@
 ---
 import logo from "../img/logo.svg";
-import PrimaryBTN from "./PrimaryBTN.astro";
 ---
 
-<nav class='container relative mx-auto p-6'>
-  <div class='flex items-center justify-between'>
+<nav class='bg-white p-6 drop-shadow-md md:bg-transparent'>
+  <div class='container relative mx-auto flex items-center justify-between'>
     <div class='pt-2'><img src={logo} alt='' /></div>
     <div class='hidden space-x-6 md:flex'>
       <a href='#' class='hover:text-darkGrayishBlue'>Pricing</a>
@@ -20,5 +19,65 @@ import PrimaryBTN from "./PrimaryBTN.astro";
         >Get Started</a
       >
     </div>
+    <button
+      id='menu-btn'
+      class='block transition-all focus:outline-none md:hidden'
+    >
+      <!-- Hamburger open -->
+      <svg
+        id='open'
+        class='text-veryDarkBlue transition-all hover:text-darkGrayishBlue'
+        xmlns='http://www.w3.org/2000/svg'
+        width='26'
+        height='26'
+        fill='currentColor'
+        class='bi bi-list'
+        viewBox='0 0 16 16'
+      >
+        <path
+          fill-rule='evenodd'
+          d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'
+        ></path>
+      </svg>
+      <!-- Hamburger close -->
+      <svg
+        id='close'
+        class='hidden text-veryDarkBlue transition-all hover:text-darkGrayishBlue'
+        xmlns='http://www.w3.org/2000/svg'
+        width='26'
+        height='26'
+        fill='currentColor'
+        class='bi bi-x-lg'
+        viewBox='0 0 16 16'
+      >
+        <path
+          d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z'
+        ></path>
+      </svg>
+    </button>
+  </div>
+  <div class='md:hidden'>
+    <div
+      id='menu'
+      class='adsolute left-6 right-6 mt-10 flex hidden flex-col items-center space-y-6 self-end bg-white py-8 font-bold sm:w-auto sm:self-center'
+    >
+      <a href='#' class='hover:text-darkGrayishBlue'>Pricing</a>
+      <a href='#' class='hover:text-darkGrayishBlue'>Priduct</a>
+      <a href='#' class='hover:text-darkGrayishBlue'>About Us</a>
+      <a href='#' class='hover:text-darkGrayishBlue'>Careers</a>
+      <a href='#' class='hover:text-darkGrayishBlue'>Community</a>
+    </div>
   </div>
 </nav>
+<script is:inline>
+  const btn = document.getElementById("menu-btn");
+  const nav = document.getElementById("menu");
+  const open = document.getElementById("open");
+  const close = document.getElementById("close");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("hidden");
+    open.classList.toggle("hidden");
+    close.classList.toggle("hidden");
+  });
+</script>
